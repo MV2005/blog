@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mx-auto">
     <a class="btn btn-primary">New Article</a>
-    {{$articles->links('partials.pagination')}}
+    {{$articles->links()}}
     <table class="table">
         <thead>
         <th>Id</th>
