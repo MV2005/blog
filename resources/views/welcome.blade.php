@@ -1,8 +1,10 @@
 @extends('partials.layout')
 
 @section('content')
-
 <div class="container mx-auto">
+    <a class="btn btn-primary">Articles</a>
+    {{ $articles -> }}
+
 <div class="flex flex-row flex-wrap">
     @foreach($articles as $article)
         <div class="basis-1/4 mb-4">
@@ -10,7 +12,10 @@
 {{--                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>--}}
                 <div class="card-body">
                     <h2 class="card-title">{{ $article->title }}</h2>
-                    <p>{{ $article->title }}</p>
+                    <p>{{ $article->snippet }}</p>
+                    <div class="stat">
+                        <div class="stat-desc">{{ $articles->created_at->diffForHumans() }}</div>
+                    </div>
                     <div class="card-actions justify-end">
                         <button class="btn btn-primary">Buy Now</button>
                     </div>
