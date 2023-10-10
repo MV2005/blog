@@ -22,7 +22,7 @@
                 <td>
                     <div class="join">
                         <button class="btn btn-info join-item">View</button>
-                        <button class="btn btn-warning join-item">Edit</button>
+                        <a href="{{route('$articles.edit', ['article' => $article])}}" class="btn btn-warning join-item">Edit</a>
                         <button class="btn btn-error join-item">Delete</button>
                     </div>
                 </td>
