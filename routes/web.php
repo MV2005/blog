@@ -20,3 +20,5 @@ Route::get('/', [\App\Http\Controllers\PublicController::class, 'index']);
 Route::get('/about', [\App\Http\Controllers\PublicController::class, 'about']);
 
 Route::get('/admin/articles', [ArticleController::class, 'index'])->name('articles.index');
+Route::get('/admin/articles/create', [ArticleController::class, 'create'])->name('articles.create');
+Route::post('/admin/articles', [ArticleController::class, 'store'])->name('articles.store');

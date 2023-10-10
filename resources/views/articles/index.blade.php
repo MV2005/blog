@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mx-auto">
-    <a class="btn btn-primary">New Article</a>
+    <a class="btn btn-primary" href="{{route('articles.create')}}" method="POST">New Article</a>
     {{$articles->links()}}
     <table class="table">
         <thead>

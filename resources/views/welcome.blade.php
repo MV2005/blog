@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container mx-auto">
-    <a class="btn btn-primary">Articles</a>
-    {{ $articles -> }}
+
+
 
 <div class="flex flex-row flex-wrap">
     @foreach($articles as $article)
@@ -14,7 +14,7 @@
                     <h2 class="card-title">{{ $article->title }}</h2>
                     <p>{{ $article->snippet }}</p>
                     <div class="stat">
-                        <div class="stat-desc">{{ $articles->created_at->diffForHumans() }}</div>
+                        <div class="stat-desc">{{ $article->created_at->diffForHumans() }}</div>
                     </div>
                     <div class="card-actions justify-end">
                         <button class="btn btn-primary">Buy Now</button>
