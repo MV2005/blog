@@ -17,6 +17,12 @@ class ArticleController extends Controller
         return view('articles.index', compact('articles'));
     }
 
+    public function deleted()
+    {
+        $articles = Article::onlyTrashed()->orderBy('deleted_at')->simplePaginate();
+        return view('articles.index', compact('articles'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -56,7 +62,11 @@ class ArticleController extends Controller
      */
     public function update(UpdateArticleRequest $request, Article $article)
     {
-        //
+        //$article->title="$request->validated('title')";
+       // $article->body="$request->validated('body')";
+        $article->fill($request->validated());
+        $article->save();
+        return redirect()->route('articles.index');
     }
 
     /**
@@ -64,6 +74,7 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        $article->delete();
+        return redirect()->route('articles.index');
     }
 }
