@@ -5,7 +5,7 @@
     <div class="container mx-auto w-1/2">
         <div class="card bg-base-100 shadow-xl">
             <div class="card-body">
-                <form action="{{route('articles.store')}}" method="POST">
+                <form action="{{route('articles.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-control w-full">
                         <label class="label" >
@@ -23,8 +23,19 @@
                         </label>
                         <textarea name="body" class="textarea textarea-bordered " placeholder="Content here"></textarea>
                     </div>
+                    <div class="form-control w-full">
+                        <label class="image" >
+                            <span class="label-image">Image</span>
+                            @error('image')
+                            <span class="label-text-alt text-error">{{$message}}</span>
+                            @enderror
+                        </label>
+                        <input name="image" type="file" placeholder="Article image" class="file-input input-bordered w-full @error('image') input-error @enderror "/>
+
+                    </div>
                     <input type="submit" value="Create" class="btn btn-primary mt-3">
                 </form>
+
             </div>
         </div>
     </div>

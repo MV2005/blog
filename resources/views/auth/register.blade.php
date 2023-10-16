@@ -9,7 +9,7 @@
         <!-- Name -->
         <div>
             <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            <x-text-input id="name" class="input input-bordered w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
@@ -18,7 +18,7 @@
             <label class="label" for="email">
                 <span class="label-text">{{__('Email')}}</span>
             </label>
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
+            <x-text-input id="email" class="input input-bordered w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
@@ -26,7 +26,7 @@
         <div class="mt-4 form-control w-full">
             <x-input-label class="label" for="password" :value="__('Password')" />
 
-            <x-text-input id="password" class="block mt-1 w-full"
+            <x-text-input id="password" class="block mt-1 w-full input input-bordered w-full"
                             type="password"
                             name="password"
                             required autocomplete="new-password" />
@@ -40,9 +40,9 @@
                             <span class="label-text">{{__('Confirm Password')}}</span>
                         </label>
         <div class="mt-4 form-control w-full">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+            <x-input-label for="password_confirmation input input-bordered w-full" :value="__('Confirm Password')" />
 
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
+            <x-text-input id="password_confirmation" class="block mt-1 w-full input input-bordered w-full"
                             type="password"
                             name="password_confirmation" required autocomplete="new-password" />
 

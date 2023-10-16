@@ -36,7 +36,10 @@ class ArticleController extends Controller
      */
     public function store(StoreArticleRequest $request)
     {
+
+        $request->file('image')->store('/public'));
         $article = new Article($request->validated());
+
        $article->save();
        return redirect()->route('articles.index');
     }
