@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -33,7 +34,8 @@ class ArticleFactory extends Factory
             'image' => "https://picsum.photos/seed/$uuid/640/480",
             'created_at' => $created,
             'updated_at' => $updated,
-            'deleted_at' => $deleted
+            'deleted_at' => $deleted,
+                'user_id' => User::inRandomOrder()->first()->id
         ];
     }
 }
