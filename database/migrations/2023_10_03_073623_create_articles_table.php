@@ -14,8 +14,8 @@ return new class extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
             $table->text('body');
+            $table->string('title');
             $table->string('image')->nullable();
         //    $table->unsignedBigInteger('user_id');
          //   $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();
