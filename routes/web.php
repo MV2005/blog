@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\PublicController::class, 'index']);
 Route::get('/about', [\App\Http\Controllers\PublicController::class, 'about']);
 Route::get('/article/{article}', [PublicController::class, 'article'])->name('public.article');
+Route::get('/tag/{tag}', [PublicController::class, 'tag'])->name('public.tag');
 
 Route::get('/admin/deleted', [ArticleController::class, 'deleted'])->name('articles.deleted');
 

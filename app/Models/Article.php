@@ -30,5 +30,26 @@ class Article extends Model
         public function likes(){
             return $this->hasMany(Like::class);
         }
+
+        public function tags(){
+        return $this->belongsToMany(Tag::class);
+        }
+
+        public function images(){
+        return $this->hasMany(Image::class);
+        }
+
+         public function image(): Attribute{
+        return Attribute::get(function (){
+            return $this->images()->first();
+        });
+        }
+
+    public function authHasLiked(){
+        if(auth()->check()) {
+            return $this->likes()->where('user_id', auth()->user()->id)->exists();
+        }
+            return false;
+    }
 }
 
