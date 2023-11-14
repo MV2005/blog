@@ -9,7 +9,7 @@
     @foreach($articles as $article)
         <div class="basis-1/4 mb-4 ">
             <div class="card mx-3 bg-base-100 shadow-xl h-full ">
-                @if($article->image->count() === 1)
+                @if($article->images->count() === 1)
             <figure><img src="{{$article->image->path}}"/></figure>
                     @elseif($article->images->count() > 1)
                     <div class="h-96 carousel carousel-vertical rounded-box">

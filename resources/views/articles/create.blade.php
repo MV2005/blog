@@ -21,26 +21,42 @@
                         <label class="label">
                             <span class="label-text">Content</span>
                         </label>
+                        @error('body')
+                        <span class="label-text-alt text-error">{{$message}}</span>
+                        @enderror
                         <textarea name="body" class="textarea textarea-bordered " placeholder="Content here"></textarea>
+                    </div>
+                    <div class="form-control w-full">
+                        <label class="label">
+                            <span class="label-text">Tags</span>
+                            </label>
+                            <select multiple class="select select-bordered" name="tags[]">
+                                @foreach($tags as $tag)
+                                <option value="{{$tag->id}}">{{$tag->name}}</option>
+                                @endforeach
+
+                            </select>
+                        @error('tags.*')
+                        <label class="label">
+                            <span class="label-text-alt text-error">{{$message}}</span>
+                        </label>
+                        @enderror
                     </div>
                     <div class="form-control w-full">
                         <label class="image" >
                             <span class="label-image">Image</span>
-                            @error('image')
+                            @error('images.*')
                             <span class="label-text-alt text-error">{{$message}}</span>
                             @enderror
                         </label>
-                        <input name="image" type="file" placeholder="Article image" class="file-input input-bordered w-full @error('image') input-error @enderror "/>
+                        <input name="images[]" type="file" multiple placeholder="Article image" class="file-input input-bordered w-full @error('images') input-error @enderror  " accept="image/*"/>
 
                     </div>
                     <input type="submit" value="Create" class="btn btn-primary mt-3">
                 </form>
-
             </div>
         </div>
     </div>
-
-
 @endsection
 
 

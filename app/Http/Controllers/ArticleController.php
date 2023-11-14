@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Http\Requests\StoreArticleRequest;
 use App\Http\Requests\UpdateArticleRequest;
+use App\Models\Image;
+use App\Models\Tag;
 use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
@@ -32,7 +34,8 @@ class ArticleController extends Controller
 
     public function create()
     {
-        return view('articles.create');
+        $tags = Tag::all();
+        return view('articles.create', compact('tags'));
     }
 
     /**
@@ -40,14 +43,25 @@ class ArticleController extends Controller
      */
     public function store(StoreArticleRequest $request)
     {
-        $article = New Article($request->validated());
-        if($request->file('image')) {
 
-        $file = $request->file('image')->store('/public');
-        $article->image = Storage::url($file);
-        }
+        $article = New Article($request->validated());
         $article->user()->associate(auth()->user());
         $article->save();
+
+        if($request->file('images')){
+            foreach ($request->file('images') as $image){
+                $file = $image->store('/public');
+                $img = new Image();
+                $img->path = Storage::url($file);
+                $img->article()->associate($article);
+                $img->save();
+            }
+        }
+        if($request->input('tags')){
+            foreach ($request->input('tags') as $tagId){
+                $article->tags()->attach($tagId);
+            }
+        }
         return redirect()->route('articles.index');
     }
 
@@ -57,7 +71,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+
     }
 
     /**
