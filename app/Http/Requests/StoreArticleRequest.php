@@ -25,6 +25,8 @@ class StoreArticleRequest extends FormRequest
             'title' => 'required',
             'body' => 'required',
             'images.*' => 'image',
+            'rating-4' => 'required',
+            'hind' => 'required',
         ];
     }
 }

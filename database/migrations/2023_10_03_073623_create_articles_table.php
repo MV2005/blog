@@ -16,6 +16,8 @@ return new class extends Migration
             $table->id();
             $table->text('body');
             $table->string('title');
+            $table->float('hind');
+            $table->integer('rating-4');
             
         //    $table->unsignedBigInteger('user_id');
          //   $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();

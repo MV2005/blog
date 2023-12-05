@@ -16,6 +16,7 @@
                         </label>
                         <input name="title" type="text" placeholder="Article Title" class="input input-bordered w-full @error('title') input-error @enderror "/>
 
+                        
                     </div>
                     <div class="form-control w-full">
                         <label class="label">
@@ -56,21 +57,26 @@
                         </div>
                         <br>
                         <h1> Kui spicy </h1>
-                        <div class="rating">
-                         <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
-                         <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" checked />
-                         <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
-                         <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
-                         <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
-                        </div>
-                            
+                        <input name="rating-4" type="text" placeholder="Article Title" class="input input-bordered w-full @error('title') input-error @enderror "/>
+
+                          
+                        <div class="form-control w-full">
+                        <label class="hind" >
+                            <span class="label-text">Hind</span>
+                        </label>
+
+                        <input name="hind" type="text" placeholder="Article Title" class="input input-bordered w-full @error('title') input-error @enderror "/>
+
+                        
+                    </div>
+                        
                         <br>
                         <select class="select select-bordered w-full max-w-xs">
                         <option disabled selected>Kas on vegan</option>
                         <option>Vegan</option>
                         <option>Pole vegan</option>
 
-</select>
+                    </select>
                     </div>
                     <input type="submit" value="Create" class="btn btn-primary mt-3">
                 </form>

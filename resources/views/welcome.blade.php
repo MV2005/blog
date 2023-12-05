@@ -27,8 +27,8 @@
                     
                     <div class="stat">
                         <div class="stat-desc">{{ $article->user->name}}</div>
-                        <div class="stat-desc"><b>Comments: </b>{{ $article->comments()->count() }}</div>
-                        <div class="stat-desc"><b>Likes: </b>{{ $article->Likes()->count() }}</div>
+                        <div class="stat-desc"><b>Spice: </b>{{ $article->rating-4 }}</div>
+                        <div class="stat-desc"><b>Hind: </b>{{ $article->hind }}</div>
                         <div class="stat-desc">{{ $article->created_at->diffForHumans() }}</div>
                         <div class="stat-desc flex flex-wrap">
 
