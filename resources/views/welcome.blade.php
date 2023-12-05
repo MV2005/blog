@@ -23,12 +23,16 @@
                 <div class="card-body">
                     <h2 class="card-title">{{ $article->title }}</h2>
                     <p>{{ $article->snippet }}</p>
+
+                    
                     <div class="stat">
                         <div class="stat-desc">{{ $article->user->name}}</div>
                         <div class="stat-desc"><b>Comments: </b>{{ $article->comments()->count() }}</div>
                         <div class="stat-desc"><b>Likes: </b>{{ $article->Likes()->count() }}</div>
                         <div class="stat-desc">{{ $article->created_at->diffForHumans() }}</div>
                         <div class="stat-desc flex flex-wrap">
+
+
                             @foreach($article->tags as $tag)
                                <a href="{{route('public.tag', ['tag' => $tag])}}">
                                 <div class="badge badge-accent badge-outline mt-1 mr-1">{{$tag->name}}</div>

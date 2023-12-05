@@ -50,7 +50,27 @@
                             @enderror
                         </label>
                         <input name="images[]" type="file" multiple placeholder="Article image" class="file-input input-bordered w-full @error('images') input-error @enderror  " accept="image/*"/>
+                        <br>
+                        <div>
+                           
+                        </div>
+                        <br>
+                        <h1> Kui spicy </h1>
+                        <div class="rating">
+                         <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
+                         <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" checked />
+                         <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
+                         <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
+                         <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
+                        </div>
+                            
+                        <br>
+                        <select class="select select-bordered w-full max-w-xs">
+                        <option disabled selected>Kas on vegan</option>
+                        <option>Vegan</option>
+                        <option>Pole vegan</option>
 
+</select>
                     </div>
                     <input type="submit" value="Create" class="btn btn-primary mt-3">
                 </form>
