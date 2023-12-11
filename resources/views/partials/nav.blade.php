@@ -11,7 +11,9 @@
                 @include('partials.links')
             </ul>
         </div>
+
         <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <h1>Nehatu burgeri leht</h1>
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
@@ -19,6 +21,7 @@
         </ul>
     </div>
     <div class="navbar-end">
+
         @guest
             <a href="{{route('register')}}" class="btn btn-is-primary mr-3">Register</a>
             <a href="{{route('login')}}" class="btn btn-is-secondary mr-3">login</a>

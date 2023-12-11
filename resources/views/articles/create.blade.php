@@ -7,9 +7,10 @@
             <div class="card-body">
                 <form action="{{route('articles.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
+
                     <div class="form-control w-full">
                         <label class="label" >
-                            <span class="label-text">Title</span>
+                            <span class="label-text">Burgeri nimi</span>
                             @error('title')
                             <span class="label-text-alt text-error">{{$message}}</span>
                             @enderror
@@ -20,29 +21,15 @@
                     </div>
                     <div class="form-control w-full">
                         <label class="label">
-                            <span class="label-text">Content</span>
+                            <span class="label-text">Burgeri sisu</span>
                         </label>
                         @error('body')
                         <span class="label-text-alt text-error">{{$message}}</span>
                         @enderror
                         <textarea name="body" class="textarea textarea-bordered " placeholder="Content here"></textarea>
                     </div>
-                    <div class="form-control w-full">
-                        <label class="label">
-                            <span class="label-text">Tags</span>
-                            </label>
-                            <select multiple class="select select-bordered" name="tags[]">
-                                @foreach($tags as $tag)
-                                <option value="{{$tag->id}}">{{$tag->name}}</option>
-                                @endforeach
 
-                            </select>
-                        @error('tags.*')
-                        <label class="label">
-                            <span class="label-text-alt text-error">{{$message}}</span>
-                        </label>
-                        @enderror
-                    </div>
+                    <br>
                     <div class="form-control w-full">
                         <label class="image" >
                             <span class="label-image">Image</span>
@@ -57,35 +44,34 @@
                         </div>
                         <br>
                         <h1> Kui spicy </h1>
-                        <h2> sisestage number 1-5</h2>
-                        <input name="rating" type="number" placeholder="Article Title" class="input input-bordered w-full @error('title') input-error @enderror "/>
+                        <input name="rating" type="number" placeholder="Article Title" class="input input-bordered @error('title') input-error @enderror "/>
 
-
-                        <div class="form-control w-full">
+                        <br>
+                        <div class="form-control w-half">
                         <label class="hind" >
                             <span class="label-text">Hind</span>
                         </label>
 
-                        <input name="hind" type="text" placeholder="Article Title" class="input input-bordered w-full @error('title') input-error @enderror "/>
-
+                        <input name="hind" type="text" placeholder="Article Title" class="input input-bordered  @error('title') input-error @enderror "/>
 
 
                     </div>
-<br>
+                    <br>
                         <h1>Vegan</h1>
                         <input name="vegan" type="text" placeholder="Article Title" class="input input-bordered w-full @error('title') input-error @enderror "/>
 
                         </select>
-
+                    <br>
                         <h1>Taimetoitlasele</h1>
                         <input name="taim" type="text" placeholder="Article Title" class="input input-bordered w-full @error('title') input-error @enderror "/>
 
                         </select>
-
+                    <br>
                         <h1>gluteenivaba</h1>
                         <input name="glu" type="text" placeholder="Article Title" class="input input-bordered w-full @error('title') input-error @enderror "/>
 
                         </select>
+                        <br>
                     </div>
                     <input type="submit" value="Create" class="btn btn-primary mt-3">
                 </form>
