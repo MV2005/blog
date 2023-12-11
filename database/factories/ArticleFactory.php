@@ -31,6 +31,7 @@ class ArticleFactory extends Factory
             return [
             'title' => fake()->sentence,
             'body' => fake()->paragraphs(3, true),
+                'taim' => rand(1,5),
             'created_at' => $created,
             'updated_at' => $updated,
             'deleted_at' => $deleted,

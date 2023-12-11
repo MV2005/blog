@@ -19,6 +19,7 @@ return new class extends Migration
             $table->float('hind');
             $table->integer('rating');
             $table->integer('vegan');
+            $table->integer('taim');
 
         //    $table->unsignedBigInteger('user_id');
          //   $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();

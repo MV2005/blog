@@ -31,8 +31,7 @@
                         <div class="stat-desc"><b>🌶️Spice: </b>{{ $article->rating }}</div>
                         <div class="stat-desc"><b>🍃Vegan: </b>{{ $article->vegan }}</div>
 
-                        <div class="stat-desc"><b>  </b>{{ $article->gluteein }}</div>
-                        <div class="stat-desc"><b> taim: </b>{{ $article->taim }}</div>
+                        <div class="stat-desc"><b>🌿taimetoitlasele: </b>{{ $article->taim }}</div>
 
                         <div class="stat-desc">{{ $article->created_at->diffForHumans() }}</div>
                         <div class="stat-desc flex flex-wrap">

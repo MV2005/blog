@@ -28,7 +28,7 @@ class StoreArticleRequest extends FormRequest
             'rating' => 'required',
             'hind' => 'required',
             'vegan' => 'required',
-
+            'taim' => 'required',
         ];
     }
 }

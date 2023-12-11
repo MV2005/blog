@@ -58,7 +58,7 @@
                         <br>
                         <h1> Kui spicy </h1>
                         <h2> sisestage number 1-5</h2>
-                        <input name="rating" type="text" placeholder="Article Title" class="input input-bordered w-full @error('title') input-error @enderror "/>
+                        <input name="rating" type="number" placeholder="Article Title" class="input input-bordered w-full @error('title') input-error @enderror "/>
 
 
                         <div class="form-control w-full">
@@ -77,7 +77,7 @@
 
                         </select>
 
-                        <h1>taim</h1>
+                        <h1>Taimetoitlasele</h1>
                         <input name="taim" type="text" placeholder="Article Title" class="input input-bordered w-full @error('title') input-error @enderror "/>
 
                         </select>
