@@ -29,6 +29,7 @@ class StoreArticleRequest extends FormRequest
             'hind' => 'required',
             'vegan' => 'required',
             'taim' => 'required',
+            'glu' => 'required',
         ];
     }
 }

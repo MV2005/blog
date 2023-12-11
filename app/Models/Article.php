@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Article extends Model
 {
     use HasFactory, SoftDeletes;
-    protected $fillable = ['title', 'body', 'rating', 'hind', 'vegan', 'taim',];
+    protected $fillable = ['title', 'body', 'rating', 'hind', 'vegan', 'taim','glu'];
 
     protected function snippet(): Attribute{
         return Attribute::get(function(){

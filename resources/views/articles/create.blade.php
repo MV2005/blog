@@ -81,6 +81,11 @@
                         <input name="taim" type="text" placeholder="Article Title" class="input input-bordered w-full @error('title') input-error @enderror "/>
 
                         </select>
+
+                        <h1>gluteenivaba</h1>
+                        <input name="glu" type="text" placeholder="Article Title" class="input input-bordered w-full @error('title') input-error @enderror "/>
+
+                        </select>
                     </div>
                     <input type="submit" value="Create" class="btn btn-primary mt-3">
                 </form>
