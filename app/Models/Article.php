@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Article extends Model
 {
     use HasFactory, SoftDeletes;
-    protected $fillable = ['title', 'body', 'rating-4', 'hind'];
+    protected $fillable = ['title', 'body', 'rating', 'hind', 'vegan', 'taim', 'guteein'];
 
     protected function snippet(): Attribute{
         return Attribute::get(function(){
@@ -43,6 +43,9 @@ class Article extends Model
         return Attribute::get(function (){
             return $this->images()->first();
         });
+        }
+        public function rating(){
+            return $this->hasMany(rating::class);
         }
 
     public function authHasLiked(){
