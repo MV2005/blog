@@ -22,7 +22,6 @@
                 @endif
 
 
-
                 <div class="card-body">
                     <h2 class="card-title ">{{ $article->title }}</h2>
                     <p>{{ $article->snippet }}</p>
@@ -30,13 +29,11 @@
 
                     <div class="stat">
 
-                        <div class="stat-desc"><b>💵Hind: </b>{{ $article->hind }}</div>
+                        <div class="stat-desc"><b>💵Hind: </b>{{ $article->hind }}$</div>
                         <div class="stat-desc"><b>🌶️Spice: </b>{{ $article->rating }}</div>
                         <div class="stat-desc"><b>🍃Vegan: </b>@if($article->vegan > 0) ✔️ @else ❎ @endif</div>
                         <div class="stat-desc"><b>🍪Gluteeinivaba: </b>@if($article->glu > 0) ✔️ @else ❎ @endif</div>
                         <div class="stat-desc"><b>🍃Taimetoitlasele: </b>@if($article->taim > 0) ✔️ @else ❎ @endif</div>
-
-
                         <div class="stat-desc">{{ $article->created_at->diffForHumans() }}</div>
                         <div class="stat-desc flex flex-wrap">
 
@@ -54,7 +51,7 @@
 
                         </form>
 
-                        <a href="{{route('public.article', ['article' => $article])}}" class="btn btn-primary">Komentaarid</a>
+                        <a href="{{route('public.article', ['article' => $article])}}" class="btn btn-primary">Vaata lähemalt</a>
                     </div>
                 </div>
             </div>

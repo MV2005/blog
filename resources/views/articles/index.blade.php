@@ -9,6 +9,10 @@
         <thead>
         <th>Id</th>
         <th>Burgeri nimi</th>
+        <th>vegan</th>
+        <th>taimetoitlased</th>
+        <th>gluteenivaba</th>
+        <th>spicy</th>
         <th>loodud</th>
         <th>uuendatud</th>
         <th>tegevused</th>
@@ -18,13 +22,19 @@
             <tr>
                 <td>{{$article->id}}</td>
                 <td>{{$article->title}}</td>
+                <td>@if($article->vegan > 0) ✔️ @else ❎ @endif</td>
+               <td>@if($article->taim > 0) ✔️ @else ❎ @endif</td>
+                <td>@if($article->glu > 0) ✔️ @else ❎ @endif</td>
+                <td>{{ $article->rating }}</td>
                 <td>{{$article->created_at}}</td>
                 <td>{{$article->updated_at}}</td>
+
                 <td>
                     <div class="join">
-                        <button class="btn btn-info join-item">View</button>
-                        <a href="{{route('articles.edit', ['article' => $article])}}" class="btn btn-warning join-item">Edit</a>
-                        <input type="submit" class="btn btn-error join-item" value="Delete" form="delete-{{$article->id}}">
+                        <a href="{{route('public.article', ['article' => $article])}}" class="btn btn-info join-item">Vaata</a>
+                        <a href="{{route('articles.edit', ['article' => $article])}}" class="btn btn-warning join-item">Muuda</a>
+                        <input type="submit" class="btn btn-error join-item" value="Kustuta" form="delete-{{$article->id}}">
+
                     </div>
 
                     <form id="delete-{{$article->id}}" action="{{route('articles.destroy', ['article' => $article])}}" method="POST">

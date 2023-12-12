@@ -25,8 +25,8 @@
                         <textarea name="body" class="textarea textarea-bordered " placeholder="Content here">{{$article->body}}</textarea>
                     </div>
 
-                    <br>
-                    <div class="form-control w-full">
+
+                   <!-- <div class="form-control w-full">
                         <label class="image" >
                             <span class="label-image">Pilt burgerist</span>
                             @error('images.*')
@@ -38,10 +38,10 @@
                         <br>
                         <div>
 
-                        </div>
+                        </div>-->
                         <br>
                         <h1> Kui spicy </h1>
-                        <input name="rating" type="number" placeholder="Sisesta number kui spicy"
+                        <input name="rating" type="number" placeholder="Sisesta number kui spicy 1-5"
                                class="input input-bordered @error('title') input-error @enderror "/>
 
                         <br>
@@ -49,7 +49,6 @@
                             <label class="hind" >
                                 <span class="label-text">Hind</span>
                             </label>
-
                             <input name="hind" type="text" placeholder="Burgeri hind"
                                    class="input input-bordered  @error('title') input-error @enderror "/>
 
@@ -86,7 +85,7 @@
 
                         </select>
 
-                    <input type="submit" value="Update" class="btn btn-primary mt-3">
+                    <input type="submit" value="UUENDA ANDMEID" class="btn btn-primary mt-3">
                 </form>
             </div>
         </div>

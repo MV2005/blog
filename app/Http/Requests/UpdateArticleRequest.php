@@ -24,6 +24,12 @@ class UpdateArticleRequest extends FormRequest
         return [
             'title' => 'required',
             'body' => 'required',
+            //'images.*' => 'image',
+            'rating' => 'required',
+            'hind' => 'required',
+            'vegan' => 'required',
+            'taim' => 'required',
+            'glu' => 'required',
         ];
     }
 }
