@@ -10,6 +10,7 @@
 
         <th>Id</th>
         <th>Burgeri nimi</th>
+        <th>Hind</th>
         <th>vegan</th>
         <th>taimetoitlased</th>
         <th>gluteenivaba</th>
@@ -24,6 +25,7 @@
             <tr>
                 <td>{{$article->id}}</td>
                 <td>{{$article->title}}</td>
+                <td>{{ $article->hind }}$</td>
                 <td>@if($article->vegan > 0) ✔️ @else ❎ @endif</td>
                <td>@if($article->taim > 0) ✔️ @else ❎ @endif</td>
                 <td>@if($article->glu > 0) ✔️ @else ❎ @endif</td>
