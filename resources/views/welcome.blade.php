@@ -25,7 +25,6 @@
                     <h2 class="card-title ">{{ $article->title }}</h2>
                     <p>{{ $article->snippet }}</p>
 
-
                     <div class="stat">
 
                         <div class="stat-desc"><b>💵Hind: </b>{{ $article->hind }}$</div>
