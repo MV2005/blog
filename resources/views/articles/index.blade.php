@@ -2,16 +2,16 @@
 
 @section('content')
 <div class="container mx-auto">
-    <a class="btn btn-primary" href="{{route('articles.create')}}" method="POST">New Article</a>
-    <a class="btn btn-secondary" href="{{route('articles.deleted')}}" method="POST">Deleted Article</a>
+    <a class="btn btn-primary" href="{{route('articles.create')}}" method="POST">LISA UUS BURGER</a>
+    <a class="btn btn-secondary" href="{{route('articles.deleted')}}" method="POST">KUSTUTA BURGER</a>
     {{$articles->links()}}
     <table class="table">
         <thead>
         <th>Id</th>
-        <th>Title</th>
-        <th>Created</th>
-        <th>Updated</th>
-        <th>Actions</th>
+        <th>Burgeri nimi</th>
+        <th>loodud</th>
+        <th>uuendatud</th>
+        <th>tegevused</th>
         </thead>
         <tbody>
         @foreach($articles as $article)
