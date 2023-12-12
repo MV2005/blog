@@ -7,6 +7,7 @@
     {{$articles->links()}}
     <table class="table">
         <thead>
+
         <th>Id</th>
         <th>Burgeri nimi</th>
         <th>vegan</th>
@@ -18,6 +19,7 @@
         <th>tegevused</th>
         </thead>
         <tbody>
+
         @foreach($articles as $article)
             <tr>
                 <td>{{$article->id}}</td>
