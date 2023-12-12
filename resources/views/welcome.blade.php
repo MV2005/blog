@@ -21,7 +21,6 @@
                         </div>
                 @endif
 
-
                 <div class="card-body">
                     <h2 class="card-title ">{{ $article->title }}</h2>
                     <p>{{ $article->snippet }}</p>
